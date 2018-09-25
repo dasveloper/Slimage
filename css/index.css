@@ -1,0 +1,189 @@
+.index-wrapper {
+  padding-top: 50px;
+
+  }
+
+  /* Upload Header */ 
+  .upload-header{
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    padding: 5px 17px;
+  }  
+  .image-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .image-capacity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #image-count {
+    margin: 10px;
+  }
+
+  /* END: Upload Header */
+
+  .add-folder-wrapper {
+    padding: 5px 0;
+    background-color: #251041;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .folder-header {
+    margin: 0;
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 1.4em;
+    color: #fff;
+  }
+  
+  .add-folder-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #D73964;
+    color: white;
+    border: none;
+    margin: 5px 15px;
+
+  }
+  .add-folder-button:hover,
+  .add-folder-button:focus {
+    background-color: #b5244b;
+    border-color: #b5244b;
+  }
+  
+  .add-folder-button .material-icons {
+    font-size: 25px;
+  }
+  #folder-list a, #folder-list a i{
+    display: none;
+    order: 2;
+  }
+  #folder-list.open a{
+    display: flex;
+  }
+  #folder-list a.active, #folder-list a.active i{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    order: 1;
+  }
+
+  .noresults{
+    padding: 100px 0;
+    font-size: 3rem;
+    text-align: center;
+    color: #d8d8d8;
+  }
+  .img-panel {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 18px;
+  }
+
+  /** Delete Menu **/
+  .delete-menu {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(100%);
+    padding: 15px;
+    background: #282828;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .4s all;
+    z-index: 9;
+  }
+  
+  .delete-menu.open {
+    transform: translateY(0%);
+  }
+  
+  .toggle-delete {
+    display: none;
+    position: absolute;
+    margin: 5px;
+    top: 0;
+    right: 0;
+  }
+  
+  .delete-count {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .delete-actions>* {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+
+  }
+  /** End: Delete Menu **/
+
+  @media (min-width: 460px) { 
+    .img-panel {
+      grid-template-columns: 33% 33% 33%;
+    }
+
+  }
+@media (min-width: 750px) { 
+  .upload-header{
+ 
+    flex-direction: row;
+  }
+  #image-count {
+    margin: 0;
+    margin-top: -3px;
+  }
+  
+    .index-wrapper {
+        height: 100%;
+        margin: 0px;
+        display: flex;
+      }    
+      .add-folder-button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        margin: 15px;
+      }
+      .add-folder-button .material-icons {
+        font-size: 34px;
+      }
+      #folder-list a.active i{
+        display: none;
+  
+      }
+  .img-panel {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  .delete-menu {
+
+    justify-content: center;
+
+  }
+  .delete-actions {
+    margin-right: 30px;
+    position: absolute;
+    right: 0;
+  }
+  
+ 
+}
+@media only screen and (min-width: 960px) {
+  .img-panel {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+  }
+}

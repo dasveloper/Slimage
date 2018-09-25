@@ -1,0 +1,56 @@
+.account-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+        margin: 40px ;
+}
+
+.account-inner-wrapper {
+    background: #fff;
+    align-self: center;
+    padding: 40px;
+}
+
+.api-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.api-key {
+    padding: 10px;
+    background: #d8d8d8;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.field-label{
+    color: #686868;
+    font-size: 1.4rem;
+}
+.field{
+    font-weight: 300;
+    color: #888888;
+    font-size: 1.4rem;
+}
+.reset-password{
+    margin-top: 20px;
+    text-align: center;
+}
+#reset-password-collapse{
+    margin-top: 20px;
+
+}
+
+@media (min-width: 750px) {
+    .account-inner-wrapper {
+        padding: 40px 80px;
+    }
+    .field-label{
+        font-size: 2rem;
+    }
+    .field{
+        font-size: 2rem;
+    }
+}

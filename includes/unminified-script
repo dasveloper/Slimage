@@ -1,0 +1,70 @@
+(function() {
+   // your page initialization code here
+   // the DOM will be available here
+   function isElementInViewport (el) {
+     var viewTop =  window.scrollY || window.pageYOffset
+     var viewBot = viewTop  + window.innerHeight;
+     var elTop = el.getBoundingClientRect().top + viewTop;
+     var elBot = elTop + el.offsetHeight
+     const offset = 100;
+     return (elBot >= viewTop - offset) && (elTop <= viewBot + offset)
+   }
+
+
+var loadHandler = function(e){
+var element=   e.target;
+
+if (element.classList && element.classList.contains("slimage")){
+
+  var visible = isElementInViewport(element);
+  if (visible){
+    swapsrc(element);
+  }
+}
+}
+var shiftHandler = function(e){
+
+  document.querySelectorAll('.slimage').forEach(function(image) {
+    var visible = isElementInViewport(image);
+    if (visible){
+      swapsrc(image);
+    }
+
+  });
+}
+var completeHandler = function(e){
+  var elements = document.getElementsByClassName("slimage");
+  for(var x=0; x < elements.length; x++)
+  {
+    if(elements[x].complete){
+    var visible = isElementInViewport(elements[x]);
+    if (visible){
+      swapsrc(elements[x]);
+    }
+  }
+}
+
+}
+var swapsrc = function(img){
+if (!img.classList.contains('loaded')){
+var newSrc = img.src.replace("/placeholder", "");
+var imageWidth = img.clientWidth;
+var nearestRound = Math.ceil(imageWidth / 50) * 50;
+newSrc += "?d="+nearestRound;
+img.src = newSrc;
+img.classList.add("loaded");
+}
+
+
+}
+if (document.body.addEventListener) {
+  document.body.addEventListener('load', function(event){loadHandler(event)}, true);
+  window.addEventListener('scroll', function(event){shiftHandler(event)}, true);
+ // document.body.addEventListener('resize', function(event){shiftHandler(event)}, true);
+} 
+//Attempt at loading images if cached
+
+completeHandler();
+
+
+})();
