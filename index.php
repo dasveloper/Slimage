@@ -24,7 +24,7 @@
       />
       <ul>
         <li>
-          <span>Size:</span> 122.9 kb</li>
+          <span>Size:</span> 57 kb</li>
         <li>
           <span>Dimensions:</span> 300 x 200 px</li>
       </ul>
