@@ -77,8 +77,9 @@
     justify-content: center;
   }
   .feature img{
-    max-width:60%;
-    max-height: 60%;
+    width:60%;
+    height: 60%;
+   
     margin: 5px 10px;
   }
   .feature p{

@@ -9,7 +9,7 @@
   <div class="example-images">
     <div class="example-img-wrapper">
       <h4>Original</h4>
-      <img class="example-img" src="https://d2yp72sq5kkz8x.cloudfront.net/samples/art-bicycle-bike-623919.jpg" />
+      <img class="example-img" src="https://d2yp72sq5kkz8x.cloudfront.net/e5cd465b4734ee791dc05dfbfeb96d4d/art-bicycle-bike-623919.jpg" />
       <ul>
         <li>
           <span>Size:</span> 758 kb</li>
@@ -20,7 +20,7 @@
     <div class="example-img-wrapper">
       <h4>Slimage</h4>
 
-      <img class="slimage example-img" src="https://d2yp72sq5kkz8x.cloudfront.net/samples/placeholder/art-bicycle-bike-623919.jpg"
+      <img class="slimage example-img" src="https://d2yp72sq5kkz8x.cloudfront.net/e5cd465b4734ee791dc05dfbfeb96d4d/placeholder/art-bicycle-bike-623919.jpg"
       />
       <ul>
         <li>
